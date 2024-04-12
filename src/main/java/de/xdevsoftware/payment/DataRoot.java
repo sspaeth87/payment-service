@@ -7,7 +7,7 @@ import java.util.List;
 
 public class DataRoot
 {
-	private List<Customer> customers;
+	private final List<Customer> customers = new ArrayList<>();;
 
 	public List<Customer> getCustomers() {
 		return this.customers;
