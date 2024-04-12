@@ -7,9 +7,13 @@ import java.util.List;
 
 public class DataRoot
 {
-	private final List<Customer> customers = new ArrayList<>();
+	private List<Customer> customers;
 
 	public List<Customer> getCustomers() {
+		if(this.customers == null) {
+			this.customers = new ArrayList<>();
+		}
+
 		return this.customers;
 	}
 }
