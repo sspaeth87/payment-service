@@ -1,24 +1,15 @@
 package de.xdevsoftware.payment;
 
-import java.time.LocalDateTime;
+import de.xdevsoftware.payment.domain.Customer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DataRoot
 {
-	private String data;
-	
-	public DataRoot()
-	{
-		this.data = LocalDateTime.now().toString();
+	private final List<Customer> customers = new ArrayList<>();
+
+	public List<Customer> getCustomers() {
+		return this.customers;
 	}
-	
-	public String getData()
-	{
-		return this.data;
-	}
-	
-	public void setData(final String data)
-	{
-		this.data = data;
-	}
-	
 }
