@@ -28,6 +28,12 @@ public class ExampleController
 		return HttpResponse.ok(this.storage.root().get().getCustomers());
 	}
 
+	@Get("fix")
+	public String fix() {
+		this.storage.store(this.storage.root().get());
+		return "fixed";
+	}
+
 	@Post("create")
 	public String root()
 	{
