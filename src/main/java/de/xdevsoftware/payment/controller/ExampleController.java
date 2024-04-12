@@ -6,6 +6,7 @@ import de.xdevsoftware.payment.domain.Customer;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
+import io.micronaut.http.annotation.Post;
 import one.microstream.enterprise.cluster.nodelibrary.common.ClusterStorageManager;
 
 import java.time.LocalDateTime;
@@ -27,7 +28,7 @@ public class ExampleController
 		return HttpResponse.ok(this.storage.root().get().getCustomers());
 	}
 
-	@Get("create")
+	@Post("create")
 	public String root()
 	{
 		final DateTimeFormatter df = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");

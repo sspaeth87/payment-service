@@ -1,5 +1,8 @@
 package de.xdevsoftware.payment.domain;
 
+import io.micronaut.serde.annotation.Serdeable;
+
+@Serdeable
 public class Customer {
     private final String firstname;
     private final String lastname;
